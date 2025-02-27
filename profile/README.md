@@ -5,6 +5,7 @@
 ## Overview
 
 **Hyvve** is a token-incentivized data marketplace connecting AI researchers, companies, and everyday data contributors. Buy AI-ready data or sell your own for token rewards on a secure, decentralized platform.
+Hyve is built on Movement & Celestia as DA for the mammothon hackathon 
 
 ---
 
