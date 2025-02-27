@@ -14,7 +14,9 @@ Hyvve offers a robust set of features for collecting and sharing AI training dat
 
 - **Text & Image Verification with AI & Vision Model**: Automated checks on text and image submissions using advanced AI algorithms and Optical Character Recognition to ensure each data point is authentic and accurate.
 - **Multimodal Data Support**: Upload and request multiple types of data (text, images, and more) within the same platform, enabling richer, more comprehensive AI-ready datasets.
-- **Advanced Campaign Dashboard & Analytics**: Launch and manage data collection campaigns with an intuitive dashboard that provides real-time analytics on contributions, quality metrics, and progress.
+- **Automated Onchain Monthly subscription**: 
+- **Campaign Creator / Reputation System**
+- **Advanced Campaign Dashboard & Analytics for Premium Users**: Launch and manage data collection campaigns with an intuitive dashboard that provides real-time analytics on contributions, quality metrics, and progress.
 - **Detailed Contributor Profile Pages**: Build trust with transparent contributor profiles showcasing reputation scores, past contributions, and earned rewards, so data buyers can identify reliable contributors at a glance.
 - **Hybrid Encryption (RSA + AES)**: All data is secured with a blend of RSA and AES encryption, combining the strength of public-key security with fast symmetric encryption for robust, high-performance protection​
 - **Bulk Data Export**: Easily export entire datasets in bulk once a campaign is completed. Download your collected data by decrypting with your generated campaign private key in convenient formats, ready to be used for training AI models without extra processing.
