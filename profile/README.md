@@ -60,29 +60,6 @@ Hyvve offers several revenue streams to maintain and grow the platform:
 
 ---
 
-## Roadmap
-
-The Hyvve project is continuously evolving. Here is a high-level roadmap of future developments:
-
-### **Q1 2025: Beta Launch**
-- Onboarding of early adopters and contributors.
-- Initial campaigns launched on the platform.
-- Collect feedback and iterate on UI/UX.
-  
-### **Q2 2025: Token Rewards System**
-- Full implementation of token incentives for contributors.
-- Launch token staking and rewards program for campaign creators.
-  
-### **Q3 2025: Premium Features & Analytics**
-- Launch premium subscription services with advanced data insights and analytics.
-- Enhanced campaign dashboard for data visualization and detailed reporting.
-  
-### **Q4 2025: Decentralized Governance**
-- Introduce community governance features, allowing token holders to vote on important decisions (such as platform updates and feature requests).
-- Full implementation of decentralized storage and contract optimization.
-
----
-
 ## Contributing
 
 Hyvve is open-source, and we welcome contributions from developers and data scientists who want to be part of the platform’s growth. Whether you’re interested in helping with smart contract development, AI model optimization, or building integrations, your input is invaluable.
@@ -98,3 +75,32 @@ To start contributing data or launching campaigns, simply [sign up](#) on the Hy
 3. Manage campaigns with the intuitive dashboard.
 
 Ready to join? [Launch App](#)
+
+      +----------------+              +-------------------+                 +-------------------+
+      |   Contributor  |  ----> (Data) --->  AI Researcher   |  ----> (Data/Insights) --->  Company      |
+      +----------------+              +-------------------+                 +-------------------+
+                |                             |                                      |
+                |                             |                                      |
+                |  (Tokens/Rewards)           |  (Tokens/Rewards)                    |
+                v                             v                                      v
+      +-----------------------+   <-->   +------------------------+    <-->   +-------------------+
+      |  Movement & Celestia  |  (Verifies Data) <-->  Blockchain Network  <-->   |  Secure Verifier    |
+      |  (Data Availability & |            (Stores & Manages Data)             |   (Tamper-Proof Data) |
+      |  Smart Contracts)     |                                                      +-------------------+
+      +-----------------------+
+                ^
+                |
+        (Data Verification)
+                |
+       +-------------------+
+       | AI Verification    |
+       |  (OCR, Authenticity)|
+       +-------------------+
+                |
+     (On-Chain Attestation)
+                |
+      +----------------------+
+      | Verified Data Attested|
+      | on Blockchain         |
+      +----------------------+
+
