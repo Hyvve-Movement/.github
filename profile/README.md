@@ -60,25 +60,32 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 
 ---
 
-## Technical Challenges (and How we solved them + link to code implementation)
+## Technical Challenges (and How We Solved Them + [Code Implementation](#))
 
-**Non-deterministic Nature of LLMs and OCR/Vision Models**
-**Challenge**:
-We encountered a challenge where our AI verification system—powered by GPT-4o produced varying scores for the same submitted dataset. This inconsistency, inherent to non-deterministic AI models, threatened the fairness and reliability of our data validation process.
+### Non-deterministic Nature of LLMs and OCR/Vision Models
 
-Our Approach to Tackling the Issue:
+**Challenge:**  
+Our AI verification system—powered by GPT-4o—produced varying scores for the same submitted dataset, undermining the fairness and reliability of our data validation process.
 
-File Processing:
-Each submission is first processed by computing a unique SHA256 hash, which is used to check a Redis cache. This step prevents redundant processing and ensures efficiency.
+**Our Approach:**
 
-Content Handling:
-The system identifies whether the file is an image or a document. Images are encoded for a multimodal prompt, while text documents have their content extracted using libraries like PyPDF2 or python-docx.
+- **File Processing:**  
+  - Compute a unique SHA256 hash for each submission.  
+  - Check against a Redis cache to avoid redundant processing.
 
-Structured Evaluation:
-A structured prompt is then constructed and fed to GPT-4o, which returns a raw quality score for the contribution.
+- **Content Handling:**  
+  - Identify whether the file is an image or a document.  
+  - For images, encode them into a multimodal prompt.  
+  - For text documents, extract content using libraries like PyPDF2 or python-docx.
 
-Normalization for Fairness:
-To mitigate the non-deterministic variations in the raw scores, we normalize the output with a random fairness factor. This step smooths out inconsistencies, ensuring that the final score remains unbiased and is capped at 100.
+- **Structured Evaluation:**  
+  - Construct a structured prompt from the processed content.  
+  - Feed the prompt to GPT-4o to generate a raw quality score.
+
+- **Normalization for Fairness:**  
+  - Normalize the raw score with a random fairness factor.  
+  - Ensure the final score remains unbiased and is capped at 100.
+
 
 ---
 
