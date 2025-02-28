@@ -116,7 +116,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
     **Our Solution:**
     
     - **Data Mirroring:**  
-      We mirrored all successful blockchain transactions to our dedicated database while keeping the blockchain as the single source of truth.
+      We mirrored all successful blockchain transactions to our dedicated PostgreSQL database while keeping the blockchain as the single source of truth.
     
     - **Hybrid Analytics Approach:**  
       For advanced analytics, we combine computed results from our backend with real-time data fetched via Next.js API routes using the Aptos SDK from the Movement Bardock Testnet. This ensures scalable, real-time analytics without overburdening blockchain resources.
