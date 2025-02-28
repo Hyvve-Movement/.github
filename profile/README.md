@@ -6,9 +6,9 @@
 
 ## Overview
 
-**Hyvve** is a token-incentivized data marketplace that connects AI researchers, companies, and everyday data contributors. On Hyvve, you can buy AI-ready data or sell your own for token rewards, all on a secure, decentralized platform. Hyvve is powered by the **Movement** and **Celestia** blockchains, designed to provide a robust, scalable, and efficient way to leverage data for AI model training.
+**Hyvve** is a token-incentivized data marketplace that connects AI researchers, companies, and everyday data contributors. On Hyvve, you can buy AI-ready data or sell your own for token rewards, all on a secure, decentralized platform. 
 
-Hyvve was built for the **Mammothon Hackathon** to foster the creation of AI-ready datasets and ensure contributors are fairly compensated for their valuable data. Whether you're an AI developer in need of data or a user willing to contribute, Hyvve provides the infrastructure for seamless data sharing and incentivization.
+Hyvve was built for the **Mammothon Hackathon** to foster the creation of AI-ready datasets and ensure contributors are fairly compensated for their valuable data. Whether you're an AI developer in need of data or a user willing to contribute, we provides the infrastructure for seamless data sharing and incentivization.
 
 ---
 
@@ -27,7 +27,7 @@ Hyvve offers a comprehensive set of features for both data contributors and camp
 - **Multimodal Data Support** 📝🖼️: Creators can request multiple types of data (e.g., text, images, and more) within the same platform, enabling richer and more comprehensive datasets for AI training.
 - **Automated Onchain Monthly Subscription** 🔄💳: Campaign creators can set up recurring payments for premium services, ensuring access to advanced features like advanced analytics, image-based campaigns, and more.
 - **Campaign Creator & Reputation System** 🏆: Establish credibility as a campaign creator by maintaining a verified history of fair payouts and clear data requirements. This encourages more contributors to participate in your campaigns.
-- **Advanced Campaign Dashboard & Analytics (Premium Users)** 📊📈: Access a powerful campaign management dashboard that offers real-time analytics on the progress of your campaign, contributor activity, and overall data quality. Premium users will have access to enhanced analytics and features like image-based campaigns.
+- **Advanced Campaign Dashboard & Analytics (Premium Users)** 📊📈: Access a powerful campaign management dashboard that offers real-time analytics on the progress of your campaign, contributor activity, and overall data quality.
 - **Bulk Data Export** 📦: Once your campaign is complete, easily export your verified dataset in bulk. You can bulk decrypt the data using your generated campaign private key, ensuring the data is ready for AI model training without additional processing.
   
 ### Shared Features:
@@ -36,16 +36,6 @@ Hyvve offers a comprehensive set of features for both data contributors and camp
 - **Leaderboard** 🏅: Track your performance and see where you stand in the community with the **Contributor Leaderboard**. The leaderboard ranks contributors based on the quality and quantity of their submissions, allowing you to compete and earn recognition for your contributions.
 - **Decentralized Storage (IPFS)** 🌐: Encrypted Data is stored on IPFS, so your data is highly available and resilient with no single point of failure. It's also encrypted, so your data is safe
 - **Intuitive UI** 🖥️: Enjoy a clean, user-friendly interface designed for both seasoned AI engineers and first-time data contributors. The platform is easy to navigate, making it simple to manage campaigns, submit data, and track progress.
-
----
-
-## Tech Stack
-
-- **Blockchain**: Movement Blockchain for decentralized applications and smart contract functionality. Celestia Blockchain as a Data Availability Layer (DA) ensures scalability and flexibility for decentralized data management.  
-- **Data Storage**: IPFS (InterPlanetary File System) for decentralized, secure data storage.  
-- **Smart Contracts**: Built on Ethereum-compatible smart contracts to handle token incentives, payments, and campaign logic.  
-- **Encryption**: Hybrid RSA + AES encryption for securing data transmission and storage.
-- **AI Tools**: Custom-built AI & OCR models for text and image verification, ensuring data authenticity and accuracy before it's accepted into campaigns.
 
 ---
 
@@ -60,21 +50,23 @@ Hyvve offers several revenue streams to maintain and grow the platform:
 
 ---
 
+## Getting Started
+
+This codebase has four main parts - Each repository has a very detailed Readme, enabling you to understand, test and interact with our project
+
+- **Frontend (Next.js)**: [Hyvve Frontend](https://github.com/Hyvve-Movement/hyvve-frontend)
+- **Backend (Python/FastAPI)**: [Hyvve Backend](https://github.com/Hyvve-Movement/hyvve-backend) 
+- **Smart Contracts (Move Modules)**: [Hyvve Contracts](https://github.com/Hyvve-Movement/hyvve-contracts)
+
+---
+
 ## Contributing
 
 Hyvve is open-source, and we welcome contributions from developers and data scientists who want to be part of the platform’s growth. Whether you’re interested in helping with smart contract development, AI model optimization, or building integrations, your input is invaluable.
 
 ---
 
-## Getting Started
 
-To start contributing data or launching campaigns, simply [sign up](#) on the Hyvve platform. It’s free to get started! Once you’re on board, you can:
-
-1. Explore active campaigns or create your own.
-2. Start contributing data and earn rewards in tokens.
-3. Manage campaigns with the intuitive dashboard.
-
-Ready to join? [Launch App](#)
 
       +----------------+              +-------------------+                 +-------------------+
       |   Contributor  |  ----> (Data) --->  AI Researcher   |  ----> (Data/Insights) --->  Company      |
