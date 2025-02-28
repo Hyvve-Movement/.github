@@ -62,12 +62,12 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 
 ## Technical Challenges (and How We Solved Them + [Code Implementation](#))
 
-### Non-deterministic Nature of LLMs and OCR/Vision Models
+### Non-deterministic Nature of LLMs and OCR/Vision Models 
 
 **Challenge:**  
 Our AI verification system—powered by GPT-4o—produced varying scores for the same submitted dataset, undermining the fairness and reliability of our data validation process.
 
-**Our Approach:**
+**Our Approach:** ([Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/blob/main/app/ai_verification/services.py))
 
 - **File Processing:**  
   - Compute a unique SHA256 hash for each submission.  
