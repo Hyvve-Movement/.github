@@ -65,7 +65,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 ### Non-deterministic Nature of LLMs and OCR/Vision Models 
 
 **Challenge:**  
-Our AI verification system—powered by GPT-4o—produced varying scores for the same submitted dataset, undermining the fairness and reliability of our data validation process.
+Our AI verification system—powered by GPT-4o—produced varying scores for the same submitted dataset, undermining the fairness and reliability of our data validation process. This inconsistency, inherent to non-deterministic AI models, threatened the fairness and reliability of our data validation process.
 
 **Our Approach:** ([Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/blob/main/app/ai_verification/services.py))
 
