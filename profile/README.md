@@ -108,7 +108,18 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
       - To ensure timely processing, our Celery off-chain automation service calls `process_due_renewals` every 12 hours.
       - This hybrid solution leverages both on-chain logic for security and off-chain scheduling for efficiency, ensuring recurring subscriptions are handled seamlessly.
 
+- ### Computational Expense of Real-time Blockchain Analytics
 
+    **Challenge:**  
+    Relying solely on the Movement blockchain RPC for each campaign’s analytical computation would have been computationally expensive and could have led to performance bottlenecks.
+    
+    **Our Solution:**
+    
+    - **Data Mirroring:**  
+      We mirrored all successful blockchain transactions to our dedicated database while keeping the blockchain as the single source of truth.
+    
+    - **Hybrid Analytics Approach:**  
+      For advanced analytics, we combine computed results from our backend with real-time data fetched via Next.js API routes using the Aptos SDK from the Movement Bardock Testnet. This ensures scalable, real-time analytics without overburdening blockchain resources.
 
 ---
 
