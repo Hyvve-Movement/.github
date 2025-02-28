@@ -60,6 +60,28 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 
 ---
 
+## Technical Challenges (and How we solved them + link to code implementation)
+
+**Non-deterministic Nature of LLMs and OCR/Vision Models**
+**Challenge**:
+We encountered a challenge where our AI verification system—powered by GPT-4o produced varying scores for the same submitted dataset. This inconsistency, inherent to non-deterministic AI models, threatened the fairness and reliability of our data validation process.
+
+Our Approach to Tackling the Issue:
+
+File Processing:
+Each submission is first processed by computing a unique SHA256 hash, which is used to check a Redis cache. This step prevents redundant processing and ensures efficiency.
+
+Content Handling:
+The system identifies whether the file is an image or a document. Images are encoded for a multimodal prompt, while text documents have their content extracted using libraries like PyPDF2 or python-docx.
+
+Structured Evaluation:
+A structured prompt is then constructed and fed to GPT-4o, which returns a raw quality score for the contribution.
+
+Normalization for Fairness:
+To mitigate the non-deterministic variations in the raw scores, we normalize the output with a random fairness factor. This step smooths out inconsistencies, ensuring that the final score remains unbiased and is capped at 100.
+
+---
+
 ## Contributing
 
 Hyvve is open-source, and we welcome contributions from developers and data scientists who want to be part of the platform’s growth. Whether you’re interested in helping with smart contract development, AI model optimization, or building integrations, your input is invaluable.
