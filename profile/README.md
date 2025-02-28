@@ -76,7 +76,7 @@ Our AI verification system—powered by GPT-4o—produced varying scores for the
 - **Content Handling:**  
   - Identify whether the file is an image or a document.  
   - For images, encode them into a multimodal prompt.  
-  - For text documents, extract content using libraries like PyPDF2 or python-docx.
+  - For text documents, extract content using libraries the PyPDF2 & python-docx.
 
 - **Structured Evaluation:**  
   - Construct a structured prompt from the processed content.  
