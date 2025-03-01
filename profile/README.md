@@ -28,7 +28,7 @@ Hyvve offers a comprehensive set of features for both data contributors and camp
 - **Automated Onchain Monthly Subscription** 🔄💳: Campaign creators can set up recurring payments for premium services, ensuring access to advanced features like advanced analytics, image-based campaigns, and more.
 - **Campaign Creator & Reputation System** 🏆: Establish credibility as a campaign creator by maintaining a verified history of fair payouts and clear data requirements. This encourages more contributors to participate in your campaigns.
 - **Advanced Campaign Dashboard & Analytics (Premium Users)** 📊📈: Access a powerful campaign management dashboard that offers real-time analytics on the progress of your campaign, contributor activity, and overall data quality.
-- **Bulk Data Export** 📦: Once your campaign is complete, easily export your verified dataset in bulk. You can bulk decrypt the data using your generated campaign RSA private key, ensuring the data is ready for AI model training without additional processing.
+- **Bulk Data Export** 📦: Once your campaign is complete, easily export your verified dataset in bulk. **You can bulk decrypt the data using your generated campaign RSA private key**, ensuring the data is ready for AI model training without additional processing.
   
 ### Shared Features:
 
