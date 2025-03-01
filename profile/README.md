@@ -90,7 +90,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 
     **Challenge:**
     
-    Blockchains, like the Movement Bardock testnet inherently lack support for recurring payments, complicating the implementation of subscription-based services such as automated on-chain monthly payments for Hyvve Premium.
+    Blockchains, like the Movement Bardock testnet inherently lack support for recurring payments, complicating the implementation of subscription-based services such as **automated on-chain monthly payments** for **Hyvve Premium**.
     
     **Our Approach:** 
     
