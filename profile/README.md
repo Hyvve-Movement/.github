@@ -60,7 +60,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 
 ---
 
-## Technical Challenges (and How We Solved Them + [Code Implementation](#))
+## Major Technical Challenges (and How We Solved Them + [Code Implementation](#))
 
 - ### Non-deterministic Nature of LLMs and OCR/Vision Models 
 
@@ -113,7 +113,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
     **Challenge:**  
     Relying solely on the Movement blockchain RPC for each campaign’s analytical computation would have been computationally expensive and could have led to performance bottlenecks.
     
-    **Our Solution:** (https://github.com/Hyvve-Movement/hyvve-backend/tree/main/app/campaigns)
+    **Our Solution:** [Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/tree/main/app/campaigns)
     
     - **Data Mirroring:**  
       We mirrored all successful blockchain transactions to our dedicated PostgreSQL database while keeping the blockchain as the single source of truth.
