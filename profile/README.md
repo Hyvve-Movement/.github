@@ -123,7 +123,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
 
 ---
 ## What's Next for Hyvve?
-  - Looking ahead, we're pushing the boundaries of privacy-preserving machine learning to empower our users even further. Our next phase will enable AI models to be trained directly on the contributed data right on the **Movement** chain, while ensuring complete data confidentiality and data handling compliance (e.g HIPAA). Using advanced techniques such as **federated learning**, **homomorphic encryption**, and **secure multi-party computation (MPC)**, we will allow model training to occur on encrypted data. 
+  - Looking ahead, we're pushing the boundaries of privacy-preserving data contribution to empower our users even further. Our next phase will enable AI models to be trained directly on the contributed data right on the **Movement** chain, while ensuring complete data confidentiality and data handling compliance (e.g HIPAA). Using advanced techniques such as **federated learning**, **homomorphic encryption**, and **secure multi-party computation (MPC)**, we will allow model training to occur on encrypted data. 
 
     This means that although the AI benefits from the insights hidden within the dataset, the raw data itself is never exposed—not even to the campaign creator. In this way, contributors and users can have complete confidence that their sensitive information remains private while still fueling powerful, decentralized AI development.
 
