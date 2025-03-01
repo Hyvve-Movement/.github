@@ -92,9 +92,9 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
     
     Blockchains, like the Movement Bardock testnet inherently lack support for recurring payments, complicating the implementation of subscription-based services such as automated on-chain monthly payments for Hyvve Premium.
     
-    **Our Approach:**
+    **Our Approach:** 
     
-    - **Delegated Payment System:**  
+    - **Delegated Payment System:**  [Code implementation](https://github.com/Hyvve-Movement/hyvve-contracts/blob/master/sources/subscription.move)
       - We built a delegated payment capability that allows users to pre-fund their subscription renewals.  
       - Funds are withdrawn and held in a dedicated delegated payment store, ensuring that renewal fees are readily available when due.
     
@@ -104,7 +104,7 @@ This codebase has four main parts - Each repository has a very detailed Readme, 
         - If yes, it deducts the subscription fee, updates the subscription period, and emits an "auto_renewed" event.
         - If not, the subscription is deactivated and flagged with a renewal failure.
       
-    - **Off-Chain Automation:**  
+    - **Off-Chain Automation:** [Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/blob/5285dc80754478d96fdb92c82700c6dd6a1c7478/app/celery/celery.py#L41)
       - To ensure timely processing, our Celery off-chain automation service calls `process_due_renewals` every 12 hours.
       - This hybrid solution leverages both on-chain logic for security and off-chain scheduling for efficiency, ensuring recurring subscriptions are handled seamlessly.
 
