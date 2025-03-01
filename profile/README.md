@@ -43,7 +43,7 @@ Hyvve offers a comprehensive set of features for both data contributors and camp
 
 Hyvve offers several revenue streams to maintain and grow the platform:
 
-- **Campaign Fees** 💸: Campaign creators pay a fee (in stablecoins or platform tokens) to launch their data requests, providing a consistent revenue stream for the platform.  
+- **Campaign Fees** 💸: Campaign creators pay a fee (in MOVE tokens) to launch their data requests, providing a consistent revenue stream for the platform.  
 - **Marketplace Cut** 🛍️: The platform takes a small percentage of the fees paid to contributors, ensuring a sustainable business model while maintaining fairness.  
 - **Premium Features** 💎: Premium users can access advanced campaign analytics, custom insights, and priority support through a monthly subscription. Features include enhanced analytics, support for image-based campaigns, and additional insights into campaign performance.  
 - **Token Incentives** 🔥: The platform is designed around the concept of token rewards for data contributors, creating an ecosystem where tokens can be traded, staked, or used within the platform.
