@@ -20,7 +20,7 @@ Hyvve offers a comprehensive set of features for both data contributors and camp
 
 - **Text & Image Verification with AI & Vision Model** 🤖📸: Automated checks on text and image submissions using advanced AI algorithms and Optical Character Recognition (OCR) to ensure authenticity and accuracy. Once data is successfully verified, an **on-chain verification attestation** is created by our secure verifier, ensuring that the data is tamper-proof and auditable, providing an immutable proof of authenticity.
 
-- **Reputation System** 🌟: Build your reputation as a contributor by collecting badges, earning higher quality scores, and unlocking higher-paying campaigns based on your submission history.
+- **Reputation System** 🌟: Build your onchain, tamper proof reputation as a contributor by collecting badges, earning higher quality scores, and unlocking higher-paying campaigns based on your submission history.
 - **Earn Tokens** 💰: Receive rewards in MOVE tokens for contributing data that meets the campaign’s quality criteria.
   
 ### For Campaign Creators:
