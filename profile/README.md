@@ -105,7 +105,8 @@ This codebase has three main parts - Each repository has a very detailed Readme,
         - If not, the subscription is deactivated and flagged with a renewal failure.
       
     - **Off-Chain Automation:** [Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/blob/5285dc80754478d96fdb92c82700c6dd6a1c7478/app/celery/celery.py#L41)
-      - To ensure timely processing, our Celery off-chain automation service calls `process_due_renewals` every 12 hours.
+      - We built an admin-only [api wrapper](https://github.com/Hyvve-Movement/hyvve-frontend/blob/main/pages/api/admin/process-due-subscription.ts) around the `process_due_renewals_` function as a Next.js api route (`process-due-subscriptions`).
+      - To ensure timely processing, our Celery off-chain automation service calls `process-due-subscriptions` every 12 hours.
       - This hybrid solution leverages both on-chain logic for security and off-chain scheduling for efficiency, ensuring recurring subscriptions are handled seamlessly.
 
 - ### Computational Expense of Real-time Blockchain Analytics
