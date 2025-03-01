@@ -52,7 +52,7 @@ Hyvve offers several revenue streams to maintain and grow the platform:
 
 ## Getting Started
 
-This codebase has four main parts - Each repository has a very detailed Readme, enabling you to understand, test and interact with our project
+This codebase has three main parts - Each repository has a very detailed Readme, enabling you to understand, test and interact with our project
 
 - **Frontend (Next.js)**: [Hyvve Frontend](https://github.com/Hyvve-Movement/hyvve-frontend)
 - **Backend (Python/FastAPI)**: [Hyvve Backend](https://github.com/Hyvve-Movement/hyvve-backend) 
