@@ -64,76 +64,6 @@ This codebase has three main parts - Each repository has a very detailed Readme,
 
 ---
 
-## Major Technical Challenges (and How We Solved Them + [Code Implementation](#))
-
-- ### Non-deterministic Nature of LLMs and OCR/Vision Models 
-
-    **Challenge:**  
-    Our AI verification system—powered by GPT-4o—produced varying scores for identical submitted datasets, a challenge inherent to non-deterministic AI models that undermined the fairness and reliability of our data validation process.
-    
-    **Our Approach:** ([Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/blob/main/app/ai_verification/services.py))
-    
-    - **File Processing:**  
-      - Compute a unique SHA256 hash for each submission.  
-      - Check against a Redis cache to avoid redundant processing.
-    
-    - **Content Handling:**  
-      - Identify whether the file is an image or a document.  
-      - For images, encode them into a multimodal prompt.  
-      - For text documents, extract content using libraries the PyPDF2 & python-docx.
-    
-    - **Structured Evaluation:**  
-      - Construct a structured prompt from the processed content.  
-      - Feed the prompt to GPT-4o to generate a raw quality score.
-    
-    - **Normalization for Fairness:**  
-      - Normalize the raw score with a random fairness factor.  
-      - Ensure the final score remains unbiased and is capped at 100.
-
-- ### Recurring Subscriptions Not Native to Blockchains
-
-    **Challenge:**
-    
-    Blockchains, like the Movement Bardock testnet inherently lack support for recurring payments, complicating the implementation of subscription-based services such as **automated on-chain monthly payments** for **Hyvve Premium**.
-    
-    **Our Approach:** 
-    
-    - **Delegated Payment System:**  [Code implementation](https://github.com/Hyvve-Movement/hyvve-contracts/blob/master/sources/subscription.move)
-      - We built a delegated payment capability that allows users to pre-fund their subscription renewals.  
-      - Funds are withdrawn and held in a dedicated delegated payment store, ensuring that renewal fees are readily available when due.
-    
-    - **Automated Renewal Processing:**  
-      - The `process_due_renewals` function in our Move contract scans for subscriptions that are active, set to auto-renew, and whose subscription period has expired.
-      - For each due renewal, it checks if the subscriber has sufficient delegated funds:
-        - If yes, it deducts the subscription fee, updates the subscription period, and emits an "auto_renewed" event.
-        - If not, the subscription is deactivated and flagged with a renewal failure.
-      
-    - **Off-Chain Automation:** [Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/blob/5285dc80754478d96fdb92c82700c6dd6a1c7478/app/celery/celery.py#L41)
-      - We built an admin-only [api wrapper](https://github.com/Hyvve-Movement/hyvve-frontend/blob/main/pages/api/admin/process-due-subscription.ts) around the `process_due_renewals_` function as a Next.js api route (`process-due-subscriptions`).
-      - To ensure timely processing, [our Celery off-chain automation service](https://github.com/Hyvve-Movement/hyvve-backend/blob/116ef4e88eea934145102ad0d50ca575d1c13c32/app/celery/celery.py#L41) calls `process-due-subscriptions` every 12 hours.
-      - This hybrid solution leverages both on-chain logic for security and off-chain scheduling for efficiency, ensuring recurring subscriptions are handled seamlessly.
-
-- ### Computational Expense of Real-time Blockchain Analytics
-
-    **Challenge:**  
-    Relying solely on the Movement blockchain RPC for each campaign’s analytical computation would have been computationally expensive and could have led to performance bottlenecks.
-    
-    **Our Solution:** [Code Implementation](https://github.com/Hyvve-Movement/hyvve-backend/tree/main/app/campaigns)
-    
-    - **Data Mirroring:**  
-      We mirrored all successful blockchain transactions to our dedicated PostgreSQL database while keeping the blockchain as the single source of truth.
-    
-    - **Hybrid Analytics Approach:**  
-      For advanced analytics, we combine computed results from our backend with real-time data fetched via Next.js API routes using the Aptos SDK from the Movement Bardock Testnet. This ensures scalable, real-time analytics without overburdening blockchain resources.
-
----
-## What's Next for Hyvve?
-  - Looking ahead, we're pushing the boundaries of privacy-preserving data contribution to empower our users even further. Our next phase will enable AI models to be trained directly on the contributed data right on the **Movement** chain, while ensuring complete data confidentiality and data handling compliance (e.g HIPAA). Using advanced techniques such as **federated learning**, **homomorphic encryption**, and **secure multi-party computation (MPC)**, we will allow model training to occur on encrypted data. 
-
-    This means that although the AI benefits from the insights hidden within the dataset, the raw data itself is never exposed—not even to the campaign creator. In this way, contributors and users can have complete confidence that their sensitive information remains private while still fueling powerful, decentralized AI development.
-
-  - User Feedback: We highly value our community's input. As we continue to refine and improve the platform, we are actively seeking user feedback to ensure that our services meet your needs and expectations. Please share your suggestions and insights through our official channels.
-
 
 ___
 
@@ -153,8 +83,8 @@ Hyvve is open-source, and we welcome contributions from developers and data scie
                 |  (Tokens/Rewards)           |  (Tokens/Rewards)                    |
                 v                             v                                      v
       +-----------------------+   <-->   +------------------------+    <-->   +-------------------+
-      |  Movement & Celestia  |  (Verifies Data) <-->  Blockchain Network  <-->   |  Secure Verifier    |
-      |  (Data Availability & |            (Stores & Manages Data)             |   (Tamper-Proof Data) |
+      |         SUI           |  (Verifies Data) <-->  Blockchain Network  <-->   |  Secure Verifier    |
+      |  (Data Availability & |            (Walrus Stores & Manages Data)             |   (Tamper-Proof Data) |
       |  Smart Contracts)     |                                                      +-------------------+
       +-----------------------+
                 ^
@@ -170,6 +100,6 @@ Hyvve is open-source, and we welcome contributions from developers and data scie
                 |
       +----------------------+
       | Verified Data Attested|
-      | on Blockchain         |
+      | on SUI         |
       +----------------------+
 
