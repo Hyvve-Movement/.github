@@ -1,41 +1,45 @@
 # Hyvve
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/your-org/datahive/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/your-org/datahive/releases)
 
-**Unlock Data for AI. Contribute and Earn with Hyvve** 🚀
 
----
+**Accelerating AI innovation through a community-driven data economy** 🚀
+
 
 ## Overview
 
-**Hyvve** is a token-incentivized data marketplace that connects AI researchers, companies, and everyday data contributors. On Hyvve, you can buy AI-ready data or sell your own for token rewards, all on a secure, decentralized platform. 
+**Hyvve** is a decentralized, token-incentivized data marketplace built on the SUI blockchain. It revolutionizes how AI-ready datasets are sourced, verified, and monetized. 
 
-Hyvve was built for the **Mammothon Hackathon** to foster the creation of AI-ready datasets and ensure contributors are fairly compensated for their valuable data. Whether you're an AI developer in need of data or a user willing to contribute, we provides the infrastructure for seamless data sharing and incentivization.
+With Hyvve, AI developers can launch campaigns to crowdsource the continuous, diverse, and high-quality data their models need, while contributors around the world earn fair rewards for providing that data. 
 
----
+The platform integrates Atoma Network’s AI-powered verification workflows to automatically check and score submissions, and uses Walrus, SUI’s decentralized storage layer, to securely store data and model artifacts. 
 
-## Key Features
+## Problem Statement
+ Modern AI systems face several critical data challenges:
+- **Centralized Data & Monopolies**: The most valuable training data is often locked away in silos controlled by tech giants or large institutions. 
 
-Hyvve offers a comprehensive set of features for both data contributors and campaign creators:
+- **Stale & insufficient pipelines**: Models drift unless they receive a constant supply of new, real-world data; Real-world conditions change – user behavior shifts, new trends emerge – causing data drift that can degrade model performance over time.
 
-### For Contributors:
+- **Lack of Diversity & Quality**: Bias and poor generalization in AI often trace back to datasets that are not diverse or high-quality enough. Many models are trained on homogeneous or error-prone data.
 
-- **Text & Image Verification with AI & Vision Model** 🤖📸: Automated checks on text and image submissions using advanced AI algorithms and Optical Character Recognition (OCR) to ensure authenticity and accuracy. Once data is successfully verified, an **on-chain verification attestation** is created by our secure verifier, ensuring that the data is tamper-proof and auditable, providing an immutable proof of authenticity.
-- **Reputation System** 🌟: Build your onchain, tamper proof reputation as a contributor by collecting badges, earning higher quality scores, and unlocking higher-paying campaigns based on your submission history.
-- **Earn Tokens** 💰: Receive instant rewards in MOVE tokens for contributing data that meets the campaign’s quality criteria.
-- **Detailed Data Formatting Guide** 📚: Access our [comprehensive user guide](https://hyvve.gitbook.io/docs/for-contributors/data-formatting) that helps you correctly format your submissions to pass our AI verification process, ensuring your data meets all quality standards for each campaign.
-  
-### For Campaign Creators:
-- **Multimodal Data Support** 📝🖼️: Creators can request multiple types of data (e.g., text, images, and more) within the same platform, enabling richer and more comprehensive datasets for AI training.
-- **Automated Onchain Monthly Subscription** 🔄💳: Campaign creators can set up recurring payments for premium services, ensuring access to advanced features like advanced analytics, image-based campaigns, and more.
-- **Campaign Creator & Reputation System** 🏆: Establish credibility as a campaign creator by maintaining a verified history of fair payouts and clear data requirements. This encourages more contributors to participate in your campaigns.
-- **Advanced Campaign Dashboard & Analytics (Premium Users)** 📊📈: Access a powerful campaign management dashboard that offers real-time analytics on the progress of your campaign, contributor activity, and overall data quality.
-- **Bulk Data Export** 📦: Once your campaign is complete, easily export your verified dataset in bulk. **You can bulk decrypt the data using your generated campaign RSA private key**, ensuring the data is ready for AI model training without additional processing.
-  
-### Shared Features:
+- **Privacy & Data Sovereignty**: In the age of GDPR and growing user awareness, privacy has become paramount. Users and regulators now demand control and fair value for their data; centralized scraping is no longer acceptable.
 
-- **Hybrid Encryption (RSA + AES)** 🔐: All data is secured with a combination of RSA (for public-key encryption) and AES (for symmetric encryption), ensuring that your data is protected end-to-end.
-- **Leaderboard** 🏅: Track your performance and see where you stand in the community with the **Contributor Leaderboard**. The leaderboard ranks contributors based on the quality and quantity of their submissions, allowing you to compete and earn recognition for your contributions.
-- **Decentralized Storage (IPFS)** 🌐: Encrypted Data is stored on IPFS, so your data is highly available and resilient with no single point of failure. It's also encrypted, so your data is safe
-- **Intuitive UI** 🖥️: Enjoy a clean, user-friendly interface designed for both seasoned AI engineers and first-time data contributors. The platform is easy to navigate, making it simple to manage campaigns, submit data, and track progress.
+- **Synthetic Data & Emerging Trends**: To work around data scarcity and privacy limits, the industry has turned to synthetic data – artificially generated datasets that mimic real data. 
+But synthetic data is no silver bullet: its quality depends on real data. Moreover, many AI tasks still require ground-truth real data for validation.
+
+## Solution
+- **Open Data Campaigns** – At the core of Hyvve is a campaign-based model. Anyone can post a bounty-backed campaign describing the exact data they need.
+
+- **Token rewards** – When launching a campaign, the requester escrows a bounty in Hyvve tokens as rewards. Contributors who submit data that meets the quality criteria earn tokens from this pool. 
+
+- **Automated Quality Verification (Powered by Atoma)** – Automated checks on data submissions using an advanced multiagent AI workflow on Atoma to dynamically select and combine the most appropriate models to ensure authenticity and accuracy. The AI agents act as campaign verifiers.
+- **Privacy-first storage** – All contributions are client-side encrypted and stored on Walrus; only campaign owners hold the decryption keys.
+
+- **Reputation System 🌟**: Build your onchain, tamper proof reputation as a contributor by collecting badges, earning higher quality scores, and unlocking higher-paying campaigns based on your submission history.
+
+- **Bulk Data Export 📦**: Once your campaign is complete, easily export your verified dataset in bulk. You can bulk export the data using your generated campaign RSA private key, ensuring the data is ready for AI model training without additional processing.
+
 
 ---
 
